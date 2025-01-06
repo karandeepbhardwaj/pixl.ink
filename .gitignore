@@ -1,0 +1,6 @@
+uploads/
+*.db
+.env
+bin/
+tmp/
+.DS_Store
