@@ -1,0 +1,18 @@
+{{define "content"}}
+<div class="upload-container">
+    <h1>Share images instantly</h1>
+    <p class="subtitle">Upload an image to get a shareable URL and QR code</p>
+    <form id="uploadForm" hx-post="/upload" hx-target="#result" hx-encoding="multipart/form-data" class="upload-form">
+        <div class="drop-zone" id="dropZone">
+            <input type="file" name="file" id="fileInput" accept="image/*" required>
+            <div class="drop-zone-text">
+                <p class="drop-icon">&#128247;</p>
+                <p>Drag and drop an image or <span class="browse-link">browse</span></p>
+                <p class="drop-hint">Supports JPEG, PNG, GIF, WebP (max 10MB)</p>
+            </div>
+        </div>
+        <button type="submit" class="btn-upload">Upload</button>
+    </form>
+    <div id="result"></div>
+</div>
+{{end}}

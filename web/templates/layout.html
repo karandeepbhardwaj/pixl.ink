@@ -1,0 +1,25 @@
+{{define "layout"}}<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixl.ink - Image Sharing</title>
+    <link rel="stylesheet" href="/static/css/app.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">pixl.ink</a>
+        <button onclick="toggleTheme()" class="theme-btn" aria-label="Toggle theme">
+            <span class="theme-icon">&#9728;</span>
+        </button>
+    </header>
+    <main class="main">
+        {{template "content" .}}
+    </main>
+    <footer class="footer">
+        <p>pixl.ink &mdash; Self-hosted image sharing</p>
+    </footer>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>{{end}}
