@@ -1,0 +1,19 @@
+{{define "content"}}
+<div class="view-container">
+    <div class="image-preview">
+        <img src="{{.FileURL}}" alt="Shared image" class="shared-image">
+    </div>
+    <div class="share-panel">
+        <h2>Share this image</h2>
+        <div class="url-group">
+            <input type="text" value="{{.URL}}" readonly id="shareUrl" class="url-input">
+            <button onclick="copyUrl()" class="btn-copy">Copy</button>
+        </div>
+        <div class="qr-section">
+            <img src="{{.QRURL}}" alt="QR Code" class="qr-image">
+            <p class="qr-hint">Scan to open this image</p>
+        </div>
+        <a href="/" class="btn-new">Upload another</a>
+    </div>
+</div>
+{{end}}
